@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# This is a simple test script for snortparser.
+# Copyright (c) 2026 Resistine.
+# Author: chmelarp
+
 import argparse
 import sys
 import os
@@ -31,13 +37,14 @@ def verify_rules(file_path):
             # Print details for the first few rules to demonstrate output
             if success_count < 1:
                 print(f"\nSuccessfully parsed DEMO rule on line {i+1}:")
-                print(f"Original: {line[:50]}...")
-                print(f"Header: {parsed.header}")
+                print(f"Rule: {line[:50]}...")
+                print(f"Parsed: {parsed.header}")
                 
             success_count += 1
         except ValueError as e:
             print(f"\n[FAIL] Error parsing line {i+1}: {e}")
             print(f"Rule: {line}")
+            print(f"Parsed: {parsed.header}")
             fail_count += 1
         except Exception as e:
             print(f"\n[FAIL] Unexpected error on line {i+1}: {e}")
@@ -54,3 +61,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     verify_rules(args.file)
+    
+    print("Test finished. Check the results, please. Should be 1 fail only. Have a nice day!")

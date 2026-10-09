@@ -92,6 +92,10 @@ class Dicts:
             # TODO: figure out what these are
             "service",
             "bufferlen",
+            "target",
+            # The target keyword allows rules to specify
+            # whether the target of the attack is the source
+            # or destination of the communication.
         }
 
         if option:
@@ -284,6 +288,9 @@ class Dicts:
             # language specifies the exact length,
             # the minimum length, the maximum length,
             # or range of URI lengths to match.
+            "bsize",
+            # The bsize keyword is a Suricata buffer inspection
+            # keyword used to match payload or buffer length.
             "isdataat",
             # The isdataat keyword verifies that the
             # payload has data at a specified location.
@@ -622,6 +629,7 @@ class Dicts:
             "fast_pattern",
             "uricontent",
             "urilen",
+            "bsize",
             "isdataat",
             "pcre",
             "pkt_data",
