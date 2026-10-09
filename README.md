@@ -1,4 +1,4 @@
-# IDS Rules Parser (rofmerly snortparser)
+# IDS Rules Parser (formerly snortparser)
 
 > This is a fork of snortparser by g-rd. The original repo can be found at https://github.com/g-rd/snortparser.
 > There was another one already but it didn't fixed all the errors: https://github.com/crashingstatic/snortparser 
